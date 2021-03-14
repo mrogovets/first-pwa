@@ -8,5 +8,9 @@ self.addEventListener("install", async (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("[SW]: activate"); // 25:27
+  console.log("[SW]: activate");
+});
+
+self.addEventListener("fetch", (event) => {
+  console.log("Fetch", event.request.url);
 });
